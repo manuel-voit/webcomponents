@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Templates und Slots</title>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <template id="my-paragraph">
+        <style>
+            p {
+                color: white;
+                background-color: #666;
+                padding: 5px;
+            }
+        </style>
+        <p>
+            <slot name="my-text">My default text</slot>
+        </p>
+    </template>
+
+    <my-paragraph></my-paragraph>
+
+    <my-paragraph>
+        <span slot="my-text">Let's have some different text!</span>
+    </my-paragraph>
+</body>
+</html>
